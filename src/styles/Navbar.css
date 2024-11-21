@@ -1,0 +1,78 @@
+.nav_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #141414;
+    padding: 18px 18px;
+    color: white;
+    font-family: Arial, sans-serif;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    height: 34px;
+    margin-left: 60px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    margin-left: 45px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.right_part a {
+    text-decoration: none;
+    color: white;
+}
+
+.left_part {
+    display: flex;
+    align-items: center;
+}
+
+.right_part {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notification {
+    position: relative;
+    padding-top: 7px;
+    padding-right: 10px;
+}
+
+.cloche {
+    height: 20px;
+}
+
+.cercle_rouge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 19px;
+    width: 19px;
+    border-radius: 100%;
+    font-size: 0.5rem;
+    background-color: #E50914;
+    color: white;
+}
+
+.triangle {
+    width: 10.67px;
+    height: 5.39px;
+    margin-right: 60px;
+
+}

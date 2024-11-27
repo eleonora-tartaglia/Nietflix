@@ -22,8 +22,6 @@ function Footer() {
                             <li><a href="#">Confidentialité</a></li>
                             <li><a href="#">Nous contacter</a></li>
                         </ul>
-                        <button className="footer__service-code">Service Code</button>
-                        <p className="footer__copyright">© with a lot of fun by Tinker Bell</p>
                     </div>
 
                     <div className="footer__column">
@@ -46,6 +44,10 @@ function Footer() {
                             <li><a href="#">Conditions d’utilisation</a></li>
                             <li><a href="#">Mentions légales</a></li>
                         </ul>
+                    </div>
+                    <div className="footer__column">
+                        <button className="footer__service-code">Service Code</button>
+                        <p className="footer__copyright">© with a lot of fun by Tinker Bell</p>
                     </div>
                 </div>
             </div>

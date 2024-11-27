@@ -1,0 +1,201 @@
+.content {
+    background-color: #141414;
+    padding: 20px 40px;
+    position: relative;
+}
+
+.content__title {
+    font-size: 10px;
+    color: white;
+    z-index: 10;
+}
+
+.content__row {
+    display: flex;
+    overflow-x: scroll;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.content__row::-webkit-scrollbar {
+    display: none; /* Pour Webkit Chrome et Safari */
+}
+
+.category__item {
+    width: 420px;
+    height: 220px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.category__item:hover {
+    transform: scale(1.05);
+}
+
+.category__icon {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.discovery {
+    background-image: url(../assets/bg-poland.png);
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 658px;
+    display: flex;
+    color: white;
+    padding: 20px;
+    margin-bottom: 250px;
+    margin-top: 50px;
+}
+
+.discovery__container {
+    width: auto;
+    z-index: 2;
+}
+
+.discovery__title {
+    margin-bottom: 67px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.discovery__title2 {
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 30px;
+    color: red;
+}
+
+.discovery__subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.discovery__description {
+    font-size: 1rem;
+    margin-bottom: 60px;
+    line-height: 1.5;
+    max-width: 580px;
+    margin-bottom: 196px;
+}
+
+.discovery__row {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    max-width: 100%;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.discovery__row::-webkit-scrollbar {
+    display: none; /* Pour Webkit Chrome et Safari */
+}
+
+.container__flute {
+    max-width: 100%;
+    margin-bottom: 50px;
+}
+
+.discovery__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.discovery__image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-left: 5px solid red;
+    object-fit: cover;
+}
+
+.discovery__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    color: white;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+    height: 35%;
+    box-sizing: border-box;
+}
+
+.discovery__title__img {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.discovery__meta {
+    font-size: 0.875rem;
+    margin: 0;
+    color: #ccc;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.play-button:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.play-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.discovery__additional {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    height: 43px;
+    max-width: 95%;
+}
+
+.discovery__additional-item {
+    font-size: 0.875rem;
+    color: #ccc;
+    padding: 5px 0;
+    text-align: left;
+    box-sizing: border-box;
+    border-bottom: 2px solid transparent; /* Barre pour l'effet au survol */
+    transition: border-color 0.3s ease; /* Animation pour l'effet au survol */
+}
+
+.discovery__additional-item:hover {
+    border-bottom: 2px solid red; /* Barre rouge au survol */
+}

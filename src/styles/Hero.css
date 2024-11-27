@@ -1,0 +1,56 @@
+.hero {
+    height: 556px;
+    top: 10px;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.hero__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.hero__image {
+    margin-top: 106px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.hero__content {
+    position: relative;
+    z-index: 2;
+    margin-left: 60px;
+    max-width: 600px;
+}
+
+.hero__title {
+    margin-top: 160px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+}
+
+.serie__title {
+    margin-left: 60px;
+}
+
+.hero__description {
+    margin-left: 60px;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero__buttons {
+    margin-left: 60px;
+    gap: 10px;
+}
+
+.hero__button {
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: transparent;
+}

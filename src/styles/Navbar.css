@@ -48,7 +48,12 @@ body {
 .right_part {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
+}
+
+.loupe {
+    height: 20px;
+    margin-right: 10px;
 }
 
 .notification {
@@ -118,6 +123,45 @@ body {
     animation: fadeIn 0.3s ease-in-out;
 }
 
+.burger_icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.burger_icon span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 3px;
+    margin-left: 50px;
+}
+
+.menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #141414;
+    width: 100%;
+    padding: 20px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.menu.active a {
+    margin: 10px 0;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -129,9 +173,12 @@ body {
     }
 }
 
-
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1400px) {
     .menu {
         display: none;
+    }
+
+    .burger_icon {
+        display: flex;
     }
 }

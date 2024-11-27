@@ -10,19 +10,29 @@ function Navbar() {
     // State pour gérer l'ouverture du menu déroulant
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    // Fonction pour basculer l'état du menu
+    // Fonction pour basculer l'état du menu utilisateur
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
-    // Utilisation de useEffect pour fermer le menu lorsque l'utilisateur clique à l'extérieur
+    // State pour gérer le menu burger
+    const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+
+    // Fonction pour basculer l'état du menu burger
+    const toggleBurgerMenu = () => {
+        setIsBurgerOpen(!isBurgerOpen);
+    };
+
+    // Utilisation de useEffect pour fermer les menus lorsque l'utilisateur clique à l'extérieur
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (
                 !event.target.closest(".dropdown_menu") && // Si le clic n'est pas sur le menu
-                !event.target.closest(".triangle") // Et si le clic n'est pas sur le triangle
+                !event.target.closest(".triangle") && // Et si le clic n'est pas sur le triangle
+                !event.target.closest(".burger_menu") // Et si le clic n'est pas sur le menu burger
             ) {
-                setIsMenuOpen(false); // Ferme le menu
+                setIsMenuOpen(false);  // Ferme aussi le menu déroulant
+                setIsBurgerOpen(false); // Ferme aussi le menu burger
             }
         };
 
@@ -39,19 +49,28 @@ function Navbar() {
         <header className="nav_bar">
             <div className="left_part">
                 <img src={logo} alt="Nietflix" className="logo" />
-                <nav className="menu">
+                
+                {/* Menu classique caché en version mobile */}
+                <nav className={`menu ${isBurgerOpen ? "active" : ""}`}>
                     <a href="#">Découverte</a>
                     <a href="#">Séries TV</a>
                     <a href="#">Films</a>
                     <a href="#">Programmes originaux</a>
                     <a href="#">Ajouts récents</a>
                     <a href="#">Ma liste</a>
+                    <a href="#">JEUNESSE</a>
                 </nav>
+
+                {/* Bouton burger */}
+                <div className="burger_icon" onClick={toggleBurgerMenu}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
 
             <div className="right_part">
                 <img className="loupe" src={loupe} alt="Recherche" />
-                <a href="#">JEUNESSE</a>
 
                 <div className="notification">
                     <img className="cloche" src={notification} alt="Notification" />
@@ -59,7 +78,7 @@ function Navbar() {
                 </div>
 
                 <img className="avatar" src={avatar} alt="Utilisateur" />
-                <img className="triangle" src={triangle} alt="Barre deroulante" onClick={toggleMenu}/>
+                <img className="triangle" src={triangle} alt="Barre deroulante" onClick={toggleMenu} />
             </div>
 
             {/* Afficher le menu déroulant si `isMenuOpen` est true */}
